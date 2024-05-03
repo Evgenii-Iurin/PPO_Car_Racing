@@ -42,3 +42,16 @@ Change the paths in `visualize.py` and run:
 ```bash
 python utils/visualize.py
 ```
+
+# Discuss  the results
+
+<div style="display: flex; justify-content: space-around;">
+    <img src="https://github.com/Evgenii-Iurin/PPO_Car_Racing/blob/6fca9f7887c2d58a156b93fbec7946f3d4da15e1/result_exp/exp_7/actor_loss.jpg" style="width:49%;">
+    <img src="https://github.com/Evgenii-Iurin/PPO_Car_Racing/blob/6fca9f7887c2d58a156b93fbec7946f3d4da15e1/result_exp/exp_7/critic_loss.jpg" style="width:49%;">
+</div>
+
+<div style="display: flex; justify-content: space-around;">
+    <img src="https://github.com/Evgenii-Iurin/PPO_Car_Racing/blob/6fca9f7887c2d58a156b93fbec7946f3d4da15e1/result_exp/exp_7/entropy.jpg" style="width:49%;">
+    <img src="https://github.com/Evgenii-Iurin/PPO_Car_Racing/blob/6fca9f7887c2d58a156b93fbec7946f3d4da15e1/result_exp/exp_7/return_value.jpg" style="width:49%;">
+</div>
+
