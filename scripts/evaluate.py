@@ -7,6 +7,8 @@ import numpy as np
 import torch.nn as nn
 
 from utils.agent import ActorCritic
+from utils.agent_vr2 import Agent
+    
 
 
 def _preprocess(img):
@@ -80,12 +82,8 @@ class CareEnvEvaluate(gym.Wrapper):
 if __name__ == "__main__":
     eval_env = gym.make("CarRacing-v2", continuous=False)
     eval_env = CareEnvEvaluate(eval_env)
-    # agent = ActorCritic((4, 84, 84), 5, actor_lr=0.0025, critic_lr=0.0025)
-    # agent.actor.load_state_dict(torch.load("/home/eiurin/work/projects/RL/PPO_selfimplemented/archive_resutls/exp_7/models/agent_best_reward_4.06.pt"))
-    # agent.critic.load_state_dict(torch.load("/home/eiurin/work/projects/RL/PPO_selfimplemented/archive_resutls/exp_7/models/agent_best_reward_4.06.pt"))
-    from utils.agent_vr2 import Agent
     agent = Agent((4, 84, 84), 5)
-    agent.load_state_dict(torch.load("/home/eiurin/work/projects/RL/PPO_selfimplemented/archive_resutls/exp_7/models/agent_best_reward_4.06.pt"))
+    agent.load_state_dict(torch.load("result_exp/exp_7/models/agent_best_reward_4.06.pt"))
 
     (s, _), done, ret = eval_env.reset(), False, 0
     step = 0
