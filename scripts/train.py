@@ -183,14 +183,14 @@ if __name__ == "__main__":
 
       if ret > best_avg_return:
         best_avg_return = ret
-        model_save_path = Path("../models/")
+        model_save_path = Path("models/")
         if not model_save_path.exists():
           model_save_path.mkdir(parents=True, exist_ok=True)
         torch.save(agent.state_dict(), str(model_save_path / f"agent_best_reward_{best_avg_return}.pt"))
         print(f"Best model updated at episode {episode} with Avg Return: {ret}")
 
     if total_steps > max_steps:
-      model_save_path = Path("../models/")
+      model_save_path = Path("models/")
       if not model_save_path.exists():
         model_save_path.mkdir(parents=True, exist_ok=True)
       torch.save(agent.state_dict(), str(model_save_path / f"last_agent_{best_avg_return}.pt"))
