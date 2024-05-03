@@ -6,8 +6,7 @@ import numpy as np
 
 import torch.nn as nn
 
-from utils.agent import ActorCritic
-from utils.agent_vr2 import Agent
+from utils.agent import Agent
     
 
 
