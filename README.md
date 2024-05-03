@@ -44,6 +44,7 @@ python utils/visualize.py
 ```
 
 # Discuss  the results
+The results of the experiment are presented below. As you can see, one of the main issues is that the loss is unstable and fluctuates constantly. After 1,000,000 steps, the agent still hasn’t learned to control the car. It's also important to note the entropy, which decreases to zero towards the end of training. This indicates that the agent is very confident in choosing a specific action. It can be inferred that in the visualization (mentioned at the beginning of this description), the agent brakes at turns and seems unsure of what to do next because it is confident that choosing to brake is a good decision. One reason might be that the agent hasn't explored the environment enough and is stuck. As a result, the reward doesn't rise above zero throughout the journey. One possible solution could be to introduce a terminal state if the agent hasn't received a reward for crossing tiles in the last N actions. It makes sense that if the car hasn't crossed the tiles, it could have gone off-track, be moving in the wrong direction, etc., so it would be logical to "terminate" the agent.
 
 <div style="display: flex; justify-content: space-around;">
     <img src="https://github.com/Evgenii-Iurin/PPO_Car_Racing/blob/6fca9f7887c2d58a156b93fbec7946f3d4da15e1/result_exp/exp_7/actor_loss.jpg" style="width:49%;">
