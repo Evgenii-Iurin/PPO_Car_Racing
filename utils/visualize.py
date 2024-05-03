@@ -105,9 +105,9 @@ def plot_entropy(file: str, save_path: str):
 if __name__ == "__main__":
 
     exp = "exp_7"
-    path = f"../result_exp/{exp}/logs/loss_log.csv"
-    path_return = f"../result_exp/{exp}/logs/return_log.csv"
-    save_path = f"../result_exp/{exp}/"
+    path = f"result_exp/{exp}/logs/loss.csv"
+    path_return = f"result_exp/{exp}/logs/returns.csv"
+    save_path = f"result_exp/{exp}/"
 
     plot_entropy(path, save_path + "entropy.jpg")
     plot_critic_loss(path, save_path + "critic_loss.jpg")
@@ -117,4 +117,4 @@ if __name__ == "__main__":
     plot_return_values(path_return, save_path + "return_value.jpg")
 
 
-    # convert_rollouts_to_gif("../eval_replays/exp_7/rollout_3", "../rollout_exp_7_3.gif")
+    # convert_rollouts_to_gif("eval_replays/exp_7/rollout_3", "rollout_exp_7_3.gif")
